@@ -1,4 +1,11 @@
-Bienvenido!
+@extends('layouts.master')
+@section('title','Bienvenido!')
+
+@section('header')
+<h2>Bienvenido!</h2>
+@stop
+
+@section('content')
 <hr>
 ¿Qué desea hacer?
 <a href="{{ route('acceder')}}">Acceder </a><br>
@@ -13,3 +20,4 @@ Eliminar producto:
 <a href="{{ route('eliminar')}}">Eliminar </a><br>
 Actualizar producto:
 <a href="{{ route('actualizar')}}">Actualizar </a><br>
+@stop
