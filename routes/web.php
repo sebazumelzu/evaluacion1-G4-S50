@@ -32,3 +32,5 @@ Route::get('/consultarProducto', 'App\Http\Controllers\productoController@consul
 Route::get('/eliminarProducto', 'App\Http\Controllers\productoController@eliminarProducto')->name('eliminar');
 
 Route::get('/actualizarProducto', 'App\Http\Controllers\productoController@actualizarProducto')->name('actualizar');
+
+Route::post('/guardarProducto', 'App\Http\Controllers\productoController@guardarProducto');

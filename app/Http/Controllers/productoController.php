@@ -30,4 +30,12 @@ class productoController extends Controller
         return view('actualizarProducto');
     }
 
+    public function guardarProducto(Request $request){
+        return "Codigo Unico: ". $request->input("codigoUnico").
+        ", Nombre: ". $request->input("nombre").
+        ", Descripcion: ". $request->input("descripcion").
+        ", Cantidad: ". $request->input("cantidad").
+        ", Precio: ". $request->input("precio");
+    }
+
 }
