@@ -13,22 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+Route::get('/', function(){
+    return view('index');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/index', function(){
+    return view('index');
 });
 
-Route::get('/producto/{id?}/{codigoUnico?}/{nombre?}/{categoria?}/{sucursal?}/{descripcion?}/{cantidad?}/{precio?}', function ($id=1, $codigoUnico=1, $nombre='Sin Nombre', $categoria='Sin Categoria', $sucursal='Sin Sucursal', $descripcion="Sin Descripcion",$cantidad=0, $precio=0) {
-    return view('producto')
-    ->with('id', $id)
-    ->with('codigoUnico', $codigoUnico)
-    ->with('nombre', $nombre)
-    ->with('categoria', $categoria)
-    ->with('sucursal', $sucursal)
-    ->with('descripcion', $descripcion)
-    ->with('cantidad', $cantidad)
-    ->with('precio', $precio);
-});
+Route::get('/login', 'App\Http\Controllers\productoController@login')->name('acceder');
+
+Route::get('/registrarProducto', 'App\Http\Controllers\productoController@registrarProducto')->name('registrar Producto');
+
+Route::get('/asignarProducto', 'App\Http\Controllers\productoController@asignarProducto')->name('asignar');
+
+Route::get('/consultarProducto', 'App\Http\Controllers\productoController@consultarProducto')->name('consultar');
+
+Route::get('/eliminarProducto', 'App\Http\Controllers\productoController@eliminarProducto')->name('eliminar');
+
+Route::get('/actualizarProducto', 'App\Http\Controllers\productoController@actualizarProducto')->name('actualizar');

@@ -1,0 +1,1 @@
+Asignar un producto:
