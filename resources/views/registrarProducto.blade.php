@@ -1,15 +1,48 @@
+@extends('layouts.master')
+@section('title','Registrar Producto')
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registrar producto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body>
+@section('header')
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+    <h2>Registrar Productos</h2>
+    </div>
+    <div class="col">
+    <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+        <a href="{{ route('acceder')}}">Ingresar </a><br>
+        </li>
+        <li class="nav-item">
+        <a href="{{ route('registrar Producto')}}">Registrar Producto</a>
+        </li>
+        <li class="nav-item">
+        <a href="{{ route('asignar')}}">Asignar </a>
+        </li>
+        <li class="nav-item">
+        <a href="{{ route('consultar')}}">Consultar </a>
+        </li>
+        <li class="nav-item">
+        <a href="{{ route('eliminar')}}">Eliminar </a>
+        </li>
+        <li class="nav-item">
+        <a href="{{ route('actualizar')}}">Actualizar </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+</div>
+@stop
 
-Registrar Producto
+@section('content')
 Ingrese los siguientes datos:
 <hr>
 
@@ -52,4 +85,5 @@ Ingrese los siguientes datos:
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
-</html> 
+  @stop
+
