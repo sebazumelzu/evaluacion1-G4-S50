@@ -17,22 +17,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-        <a href="{{ route('acceder')}}">Ingresar </a><br>
+        <a href="#">Ingresar </a><br>
         </li>
         <li class="nav-item">
-        <a href="{{ route('registrar Producto')}}">Registrar Producto</a>
+        <a href="productos/create">Registrar Producto</a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('asignar')}}">Asignar </a>
+        <a href="#">Asignar </a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('consultar')}}">Consultar </a>
+        <a href="#">Consultar </a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('eliminar')}}">Eliminar </a>
+        <a href="#">Eliminar </a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('actualizar')}}">Actualizar </a>
+        <a href="#">Actualizar </a>
         </li>
       </ul>
     </div>
@@ -50,9 +50,9 @@
 <div class="mb-3">
       <select class="form-select" aria-label="sucursal">
     <option selected>Seleccione la sucursal</option>
-    <option value="1">Talca</option>
-    <option value="2">Paris</option>
-    <option value="3">Londres</option>
+    <option value="1">Norte</option>
+    <option value="2">Centro</option>
+    <option value="3">Sur</option>
   </select>
 </div>
 <div class="mb-3">

@@ -17,22 +17,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-        <a href="{{ route('acceder')}}">Ingresar </a><br>
+        <a href="#">Ingresar </a><br>
         </li>
         <li class="nav-item">
-        <a href="{{ route('registrar Producto')}}">Registrar Producto</a>
+        <a href="productos/create">Registrar Producto</a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('asignar')}}">Asignar </a>
+        <a href="#">Asignar </a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('consultar')}}">Consultar </a>
+        <a href="#">Consultar </a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('eliminar')}}">Eliminar </a>
+        <a href="#">Eliminar </a>
         </li>
         <li class="nav-item">
-        <a href="{{ route('actualizar')}}">Actualizar </a>
+        <a href="#">Actualizar </a>
         </li>
       </ul>
     </div>

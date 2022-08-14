@@ -13,28 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    return view('index');
-});
+Route::get('/', 'App\Http\Controllers\ProductosController@index');
 
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/index', function(){
-    return view('index');
-});
-
-Route::get('/login', 'App\Http\Controllers\productoController@login')->name('acceder');
-
-Route::get('/registrarProducto', 'App\Http\Controllers\productoController@registrarProducto')->name('registrar Producto');
-
-Route::get('/asignarProducto', 'App\Http\Controllers\productoController@asignarProducto')->name('asignar');
-
-Route::get('/consultarProducto', 'App\Http\Controllers\productoController@consultarProducto')->name('consultar');
-
-Route::get('/eliminarProducto', 'App\Http\Controllers\productoController@eliminarProducto')->name('eliminar');
-
-Route::get('/actualizarProducto', 'App\Http\Controllers\productoController@actualizarProducto')->name('actualizar');
-
-Route::post('/guardarProducto', 'App\Http\Controllers\productoController@guardarProducto');
+Route::resource('productos', 'App\Http\Controllers\ProductosController');
