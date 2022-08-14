@@ -20,7 +20,19 @@ class InsertarDatosProductos extends Seeder
             'nomProd'=>'palta',
             'desProd'=>'una palta',
             'cate_id' => '1'
-        ]        
+        ],
+        [
+            'codProd'=>'122',
+            'nomProd'=>'Manzana',
+            'desProd'=>'Manzana Fuji',
+            'cate_id' => '2'
+        ],
+        [
+            'codProd'=>'1233',
+            'nomProd'=>'Ace 1 lt.',
+            'desProd'=>'Detergente de 1 litro',
+            'cate_id' => '3'
+        ]       
         ));
     }
 }

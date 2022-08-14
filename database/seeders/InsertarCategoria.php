@@ -16,8 +16,16 @@ class InsertarCategoria extends Seeder
     {
         DB::table('categorias')->insert(array(
             [
-                'nomCat'=> 'verdura'
-            ]        
+                'nomCat'=> 'Verdura'
+            ],    
+            
+            [
+                'nomCat'=> 'Fruta'
+            ],
+            
+            [
+                'nomCat'=> 'Aseo'
+            ]       
             ));
     }
 }

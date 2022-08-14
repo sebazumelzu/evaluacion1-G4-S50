@@ -16,9 +16,14 @@ class InsertarDatosSucursales extends Seeder
     {
         DB::table('sucursales')->insert(array(
         [
-            'codSuc'=>'1',
             'nomSuc'=>'norte'
-        ]        
+        ],
+        [
+            'nomSuc'=>'centro'
+        ],
+        [
+            'nomSuc'=>'sur'
+        ]  
         ));
     }
 }

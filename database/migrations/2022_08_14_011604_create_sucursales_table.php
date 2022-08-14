@@ -15,7 +15,6 @@ class CreateSucursalesTable extends Migration
     {
         Schema::create('sucursales', function (Blueprint $table) {
             $table->id();
-            $table->integer('codSuc');
             $table->text('nomSuc', 100);
             $table->timestamps();
         });
