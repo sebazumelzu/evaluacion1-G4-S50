@@ -18,8 +18,8 @@ class InsertarDatosProductos extends Seeder
         [
             'codProd'=>'1',
             'nomProd'=>'palta',
-            'catProd'=>'verduras',
             'desProd'=>'una palta',
+            'cate_id' => '1'
         ]        
         ));
     }
