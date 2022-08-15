@@ -11,9 +11,8 @@
         <div class="col-3">
         <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                        <h5 class="card-title">{{ $producto->nomProd}</h5>
-                        <p class="card-text">{{ $producto->desProd}</p>
-                        <a href="#" class="btn btn-primary">Disponibilidad en sucursales</a>
+                        <h5 class="card-title">{{ $producto->nomProd}}</h5>
+                        <p class="card-text">{{ $producto->desProd}}</p>
                     </div>
                </div>
         </div>

@@ -21,7 +21,7 @@
             <textarea name="desProd" class="form-control" id="desProd" cols="30" rows="10"></textarea>
         </div>
         <div class="mb-3">
-            <label for="cate_id" class="form-label">Ctaegoría del Producto</label>
+            <label for="cate_id" class="form-label">Categoría del Producto</label>
             <input type="text"class="form-control" name="cate_id" id="cate_id">
         </div>
         <button type="submit" class="btn btn-success">Agregar Producto</button>

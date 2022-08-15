@@ -11,7 +11,7 @@
         <div class="col-3">
         <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                        <h5 class="card-title">{{ $sucursal->nomSuc}</h5>
+                        <h5 class="card-title">{{ $sucursal->nomSuc}}</h5>
                         <a href="#" class="btn btn-primary"></a>
                     </div>
                </div>

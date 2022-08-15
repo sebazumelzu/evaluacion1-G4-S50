@@ -32,4 +32,29 @@ class SucursalesController extends Controller
          'sucursales' => $sucursales
         ]);
       }
+
+      public function createasucprod(){
+        return view('sucursales.agregarasig');
+     }
+
+     public function storesucprod(Request $request){
+        $this->validate($request, [
+           'prod_id' => 'required',
+           'suc_id' => 'required',
+           'precioProd' => 'required',
+           'stockProd' => 'required'
+        ]);
+  
+        $prodsucursal = new prodSucursal();
+        $prodsucursal->prod_id = $request->prod_id;
+        $prodsucursal->suc_id = $request->suc_id;
+        $prodsucursal->precioProd = $request->precioProd;
+        $prodsucursal->stockProd = $request->stockProd;
+        $prodsucursal->save();
+  
+        $prodsucursal = prodSucursal::get();
+          return view('sucursales.agregarasig',[
+           'productossucursales' => $prodSucursales
+          ]);
+        }
 }
