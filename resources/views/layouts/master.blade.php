@@ -9,20 +9,14 @@
   </head>
   <body>
     @section('header')
-     <h2>cabecera de mi web</h2>
      @show 
 
-        <div class="container">
-            @yield('content')
-        </div>
+        
+    @section('content')
+    @show 
+       
 
     @section('footer')
-        <hr>
-        <h9>Sergio Vargas<br>
-            Sebastian Zumelzu<br>
-            Sebastian Figueroa<br>
-            Paloma Riquelme<br>
-        </h9>
     @show 
 
 

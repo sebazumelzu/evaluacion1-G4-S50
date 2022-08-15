@@ -5,85 +5,61 @@
 <div class="container text-center">
   <div class="row align-items-start">
     <div class="col">
-    <h2>Registrar Productos</h2>
+    <h2>Stock de Productos</h2>
     </div>
-    <div class="col">
-    <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Inicio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-        <a href="#">Ingresar </a><br>
-        </li>
-        <li class="nav-item">
-        <a href="productos/create">Registrar Producto</a>
-        </li>
-        <li class="nav-item">
-        <a href="#">Asignar </a>
-        </li>
-        <li class="nav-item">
-        <a href="#">Consultar </a>
-        </li>
-        <li class="nav-item">
-        <a href="#">Eliminar </a>
-        </li>
-        <li class="nav-item">
-        <a href="#">Actualizar </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Ingresar</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="productos/create">Registrar Productos</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Asignar</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Consultar</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Eliminar</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Actualizar</a>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+            </nav>
     </div>
 </div>
 @stop
 
 @section('content')
-Ingrese los siguientes datos:
-<hr>
+<div class="row">
+        @foreach($producto as $productos)
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="https://www.latercera.com/resizer/PyRyhxgZA0KkLQt6yTiYQ7TlaMQ=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/PHIHC6L7XVFARAKZXNDOSQS23Y.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Producto: {{ $productos->nomProd }}</h5>
+                <p class="card-text">Codigo: {{ $productos->codProd }}</p>
+                <p class="card-text">Descripcion: {{ $productos->desProd }}</p>
+                <p class="card-text">Categoria: {{ $productos->cate_id}}</p>
+              </div>
+            </div>
+        </div>
+        @endforeach
+      </div>
+            
+@stop
 
-<form method="POST" action="{{ url('/guardarProducto') }}">
-  <div class="mb-2">
-    <label for="codigoUnico" class="form-label">Codigo Unico:</label>
-    <input type="number" class="form-control" id="codigoUnico" name="codigoUnico">
-  </div>
-  <div class="mb-2">
-    <label for="nombre" class="form-label">Nombre del producto:</label>
-    <input type="text" class="form-control" id="nombre" name="nombre">
-  </div>
-  <select class="form-select" aria-label="categoria">
-    <option selected>Seleccione la categoria</option>
-    <option value="1">Categoria 1</option>
-    <option value="2">Categoria 2</option>
-    <option value="3">Categoria 3</option>
-  </select>
-  <select class="form-select" aria-label="sucursal">
-    <option selected>Seleccione la sucursal</option>
-    <option value="1">Talca</option>
-    <option value="2">Paris</option>
-    <option value="3">Londres</option>
-  </select>
-  <div class="mb-2">
-    <label for="descripcion" class="form-label">Descripcion:</label>
-    <input type="text" class="form-control" id="descripcion" name="descripcion">
-  </div>
-  <div class="mb-2">
-    <label for="cantidad" class="form-label">Cantidad:</label>
-    <input type="number" class="form-control" id="cantidad" name="cantidad">
-  </div>
-  <div class="mb-2">
-    <label for="precio" class="form-label">Precio:</label>
-    <input type="number" class="form-control" id="precio" name="precio">
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Registrar</button>
-</form>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  </body>
-  @stop
+@section('footer')
+@stop
 
