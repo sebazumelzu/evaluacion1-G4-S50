@@ -15,8 +15,8 @@ class CreateProductosSucursalesTable extends Migration
     {
         Schema::create('productossucursales', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('prod_id')->constrained('productos');
-            $table->foreignId('suc_id')->constrained('sucursales');
+            $table->foreignId('prod_id')->constrained('productos')->onDelete('cascade');
+            $table->foreignId('suc_id')->constrained('sucursales')->onDelete('cascade');
             $table->integer('precioProd');
             $table->integer('stockProd');
             $table->timestamps();

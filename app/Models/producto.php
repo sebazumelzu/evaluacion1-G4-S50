@@ -11,12 +11,14 @@ class producto extends Model
     protected $primaryKey = 'id';
     protected $table = 'productos';
 
+    
     public function categorias(){
         return $this->belongsTo(Categoria::class, 'cate_id');
     }
-
-    public function productossucursales(){
-        return $this->hasMany(Productossucursal::class);
+    
+    //Relación muchos a muchos
+    public function sucursales(){
+        return $this->belongsToMany('App\Models\sucursal');
     }
 
 }

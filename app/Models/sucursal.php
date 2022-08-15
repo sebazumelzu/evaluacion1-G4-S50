@@ -11,7 +11,8 @@ class sucursal extends Model
     protected $primaryKey = 'id';
     protected $table = 'sucursales';
 
-    public function productossucursales(){
-        return $this->hasMany(Productossucursal::class);
+    //Relación muchos a muchos
+    public function productos(){
+        return $this->belongsToMany('App\Models\producto');
     } 
 }

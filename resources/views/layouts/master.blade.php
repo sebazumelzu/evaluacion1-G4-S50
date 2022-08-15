@@ -1,31 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/app.css">
+    <title>Laravel - @yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-    @section('header')
-     <h2>cabecera de mi web</h2>
-     @show 
-
         <div class="container">
-            @yield('content')
+          @section('header')
+          @show
+          @section('content')
+          @show
+          <br>
+
+          <hr>      
+          @section('footer')
+          @show 
+          <br>
+          <hr>           
         </div>
-
-    @section('footer')
-        <hr>
-        <h9>Sergio Vargas<br>
-            Sebastian Zumelzu<br>
-            Sebastian Figueroa<br>
-            Paloma Riquelme<br>
-        </h9>
-    @show 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
