@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="row">
-       <form action="/productos" method="POST">
+       <form action="/asignarprodsuc" method="POST">
         <div class="mb-3">
             <label for="prod_id" class="form-label">ID Producto</label>
             <input type="text" class="form-control" name="prod_id" id="prod_id">

@@ -34,7 +34,7 @@ class SucursalesController extends Controller
       }
 
       public function createasucprod(){
-        return view('sucursales.agregarasig');
+        return view('asignarprodsuc.agregarasig');
      }
 
      public function storesucprod(Request $request){
@@ -53,7 +53,7 @@ class SucursalesController extends Controller
         $prodsucursal->save();
   
         $prodsucursal = prodSucursal::get();
-          return view('sucursales.agregarasig',[
+          return view('asignarprodsuc.agregarasig',[
            'productossucursales' => $prodSucursales
           ]);
         }
