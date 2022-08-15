@@ -21,6 +21,8 @@ Route::get('/', 'App\Http\Controllers\SucursalesController@index');
 
 Route::resource('sucursales', 'App\Http\Controllers\SucursalesController');
 
+Route::resource('asignarprodsuc', 'App\Http\Controllers\AsigProdSucController');
+
 // <<<<<<< HEAD
 // Route::get('/registrarprod', function () {
 //     return view('registrarprod');
