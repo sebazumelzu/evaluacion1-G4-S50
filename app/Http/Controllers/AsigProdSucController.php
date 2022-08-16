@@ -17,11 +17,6 @@ class AsigProdSucController extends Controller
         return view('asignarprodsuc.agregarasig');
      }
 
-   public function createasignar(){
-   $productos = Producto::all();
-   return view('asignarprodsuc.agregarasig', compact('productos'));
-   }
-
    public function store(Request $request){
         $this->validate($request, [
            'prod_id' => 'required',
