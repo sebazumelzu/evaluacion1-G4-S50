@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\ProductosController@index');
 
 Route::resource('productos', 'App\Http\Controllers\ProductosController');
+
+Route::resource('sucursales', 'App\Http\Controllers\SucursalesController');

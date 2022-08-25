@@ -10,12 +10,13 @@
   <body>
     @section('header')
      @show 
+    <hr>
 
         
     @section('content')
     @show 
-       
-
+    <br>
+    <hr>
     @section('footer')
     @show 
 
