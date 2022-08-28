@@ -21,13 +21,13 @@
         <a href="#">Ingresar </a><br>
         </li>
         <li class="nav-item">
-        <a href="productos/create">Registrar Producto</a>
+        <a href="productos">Registrar y Consultar Producto</a>
         </li>
         <li class="nav-item">
-        <a href="#">Asignar </a>
+        <a href="sucursales">Crear Sucursal</a>
         </li>
         <li class="nav-item">
-        <a href="#">Consultar </a>
+        <a href="asignarprodsuc">Asignar Productos a Sucursal </a>
         </li>
         <li class="nav-item">
         <a href="#">Eliminar </a>

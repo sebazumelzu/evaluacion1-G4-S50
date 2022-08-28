@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('index', 'App\Http\Controllers\IndexController@index');
+
 Route::get('/', 'App\Http\Controllers\ProductosController@index');
 
 Route::resource('productos', 'App\Http\Controllers\ProductosController');
@@ -23,6 +25,13 @@ Route::resource('sucursales', 'App\Http\Controllers\SucursalesController');
 
 Route::resource('asignarprodsuc', 'App\Http\Controllers\AsigProdSucController');
 
+Route::get('/deleteProducto/{codProd}', 'App\Http\Controllers\ProductosController@delete');
+
+Route::get('/updateProducto/{codProd}', 'App\Http\Controllers\ProductosController@update');
+
+Route::post('/updateProducto', 'App\Http\Controllers\ProductosController@updateSave');
+
+Route::get('/miniatura/{filename}', 'App\Http\Controllers\ProductosController@getImagen');
 // <<<<<<< HEAD
 // Route::get('/registrarprod', function () {
 //     return view('registrarprod');

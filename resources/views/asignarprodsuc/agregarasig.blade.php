@@ -9,21 +9,23 @@
     <div class="row">
        <form action="/asignarprodsuc" method="POST">
         <div class="mb-3">
-            <select name= "codProd"class="form-select" aria-label="Default select example">
-                <!-- <option value="">--Escoja un producto--</option>
+            <label for="prod_id" class="form-label">Código Producto</label>
+            <select name= "prod_id"class="form-select" aria-label="Default select example">
+                <option value="">--Escoja un producto--</option>
                 @foreach ($productos as $producto)
-                <option value="{{ $producto['nomProd'] }}">{{ $producto['codProd'] }}</option>
-                @endforeach -->
+                <option value="{{ $producto['id'] }}">{{ $producto['nomProd'] }} - Código: "{{ $producto['codProd'] }}"</option>
+                @endforeach
             </select>
         </div>
         <div class="mb-3">
             <label for="suc_id" class="form-label">ID Sucursal</label>
-            <input type="text" class="form-control" name="suc_id" id="suc_id">
-        </div>
-        <div class="mb-3">
-            <label for="precioProd" class="form-label">Precio producto</label>
-            <input type="text" class="form-control" name="precioProd" id="precioProd">
-        </div>
+            <select name= "suc_id"class="form-select" aria-label="Default select example">
+                <option value="">--Escoja una Sucursal--</option>
+                @foreach ($sucursales as $sucursal)
+                <option value="{{ $sucursal['id'] }}">{{ $sucursal['nomSuc'] }} - Código: "{{ $sucursal['id'] }}"</option>
+                @endforeach
+            </select>
+        </div>        
         <div class="mb-3">
             <label for="stockProd" class="form-label">Stock del producto</label>
             <input type="text"class="form-control" name="stockProd" id="stockProd">
@@ -33,4 +35,5 @@
     </div>
 @stop 
 @section('footer')
+<a href="index" type="button" class="btn btn-secondary"> Menú Principal</a>
 @stop

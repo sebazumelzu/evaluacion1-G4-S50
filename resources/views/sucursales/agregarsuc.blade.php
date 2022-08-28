@@ -17,4 +17,5 @@
     </div>
 @stop 
 @section('footer')
+<a href="index" type="button" class="btn btn-secondary"> Menú Principal</a>
 @stop

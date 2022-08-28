@@ -10,31 +10,36 @@ use App\Models\prodsucursal;
 class AsigProdSucController extends Controller
 {
    public function index(){
-         return view('asignarprodsuc.agregarasig');
+    $productos = Producto::all();
+    $sucursales = Sucursal::all();
+    $prodsucursal = ProdSucursal::all();
+    return view('asignarprodsuc.agregarasig', compact('productos', 'sucursales'),[
+      'prodsucursal' => $prodsucursal
+      ]);
      } 
-        
-   public function create(){             
+   
+   public function create(){       
         return view('asignarprodsuc.agregarasig');
      }
 
-   public function store(Request $request){
-        $this->validate($request, [
+   public function store(Request $request){       
+      $this->validate($request, [
            'prod_id' => 'required',
            'suc_id' => 'required',
-           'precioProd' => 'required',
            'stockProd' => 'required'
         ]);
-  
+
         $prodsucursal = new ProdSucursal();
         $prodsucursal->prod_id = $request->prod_id;
         $prodsucursal->suc_id = $request->suc_id;
-        $prodsucursal->precioProd = $request->precioProd;
         $prodsucursal->stockProd = $request->stockProd;
         $prodsucursal->save();
   
-        $prodsucursal = prodSucursal::get();
-          return view('asignarprodsuc.agregarasig',[
-           'productossucursales' => $prodSucursales
+        $productos = Producto::all();
+        $sucursales = Sucursal::all();
+        $prodsucursal = ProdSucursal::all();
+        return view('asignarprodsuc.agregarasig', compact('productos', 'sucursales'),[
+          'prodsucursal' => $prodsucursal
           ]);
-        }   
+        }
 }

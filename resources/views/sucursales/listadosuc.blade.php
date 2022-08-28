@@ -11,8 +11,7 @@
         <div class="col-3">
         <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                        <h5 class="card-title">{{ $sucursal->nomSuc}}</h5>
-                        <a href="#" class="btn btn-primary"></a>
+                        <h5 class="card-title">Nombre de sucursal: {{ $sucursal->nomSuc}}</h5>
                     </div>
                </div>
         </div>
@@ -22,4 +21,5 @@
 @section('footer')
 <a href="sucursales/create" type="button" class="btn btn-secondary"> Agregar sucursal</a>
 @stop
+<a href="index" type="button" class="btn btn-secondary"> Menú Principal</a>
 <br> 
